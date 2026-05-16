@@ -1,0 +1,39 @@
+/*Fonts*/
+@font-face {
+  font-family: "raleway";
+  src: url(../fonts/Raleway-Black.ttf);
+}
+
+@font-face {
+  font-family: "raleway_bold";
+  src: url(../fonts/Raleway-Bold.ttf);
+}
+
+:root {
+  /* colors */
+  --prime-red: #E21E27;
+  --prime-grey: #D9D9D9;
+  --prime-white: #FFF;
+  --prime-black: #1E1E1E;
+  --prime-sunflower: #FFD998;
+  --secondary-sunflower: #FFE8B6;
+  --prime-lime: #81D979;
+  --secondary-lime: #A1EEAC;
+  --prime-blue: #3BB7EA;
+  --secondary-blue: #90D9F8;
+
+
+  /* font sizes */
+  /*--h1-size: 48px;
+  --p-size: 18px;
+  --nav-li-size: 20px;
+  --cta-font-size: 128px;*/
+
+  /* borders */
+  /*--cta-borders: 1px;*/
+
+  /* fonts */
+  --h1-font: "raleway";
+  --h2-font: "raleway_bold";
+  --p-font: "raleway";
+}
