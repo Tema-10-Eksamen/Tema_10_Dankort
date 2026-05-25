@@ -42,6 +42,7 @@ header.scrolled {
   margin-left: auto;
   flex-wrap: nowrap;
 }
+
 .menu a {
   color: #000;
   text-decoration: none;
@@ -73,14 +74,17 @@ font-family: var(--p-font);
 }
 
 /*shop knappen*/
+.menu .shop {
+    border-radius: 999px;
+  background-color: var(--prime-lime);
+}
 
 .shop {
-  background-color: var(--prime-lime);
   all: unset;
   display: inline-block;
   padding: 0.5em 1.5em;
-  border: 1px solid #000;
   cursor: pointer;
+  box-shadow: #000;
   color: #000;
   transition: transform 0.3s ease;
 }
@@ -138,6 +142,7 @@ font-family: var(--p-font);
 .mobile-nav.open img {
   width: 18px;
 }
+/*Footer*/
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
