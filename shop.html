@@ -3,44 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Css/custom.css" />
-    <link rel="stylesheet" href="Css/index.css" />
-    <script src="js/burger.js" defer></script>
-    <!--CSS LINKS-->
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/custom.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2"
+        }
+      }
+    </script>
     <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/shop.css?v=2026-05-26-final" />
     <title>Dankort-case</title>
     <link rel="icon" type="image/png" href="favicon/apple-touch-icon.svg" />
   </head>
-  <body>
+  <body data-page="shop">
     <header>
       <div class="logo">
-        <a href="index.html"> <img src="imgs/logo.webp" alt="" /></a> <p>En del af Nexi Group</p>
+        <a href="index.html"><img src="imgs/logo.webp" alt="Logo" /></a>
+        <p>En del af Nexi Group</p>
       </div>
-      <nav class="menu">
+
+      <nav class="menu" aria-label="Primær navigation">
         <a href="index.html">Forside</a>
         <a href="about.html">Om os</a>
-        <a href="shop.html"class="shop">Merch</a>
-        <img src="imgs/profilelogo.webp" alt="">
+        <a href="shop.html" class="shop">Merch</a>
+        <img src="imgs/profillogo.webp" alt="Profil" />
       </nav>
 
-      <div class="mobile-nav">
+      <div class="mobile-nav" aria-label="Mobil navigation">
         <a href="index.html">Forside</a>
         <a href="about.html">Om os</a>
-        <a href="shop.html"class="shop">Merch</a>
-        <img src="imgs/profilelogo.webp" alt="">
-        </div>
-
-      <div class="burger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <a href="shop.html" class="shop">Merch</a>
+        <img src="imgs/profillogo.webp" alt="Profil" />
       </div>
 
-      <a href="shop.html"></a>
+      <button class="burger" type="button" aria-label="Åbn menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
-   
+
+    <main class="shop-page">
+      <section class="shop-hero">
+        <p class="shop-eyebrow">Scandinavisk eco-store</p>
+        <h2>Modern ecommerce med fokus på materialer og design</h2>
+        <p>
+          Utforsk et roligt og premium produktgitter med naturlige materialer, tydelig lagerstatus,
+          kampagner og elegante kortdesign på tværs af mobil, tablet og desktop.
+        </p>
+      </section>
+
+      <section class="shop-controls" aria-label="Filtrering og sortering">
+        <label class="shop-controls__field">
+          <span>Søg produkter</span>
+          <input id="searchInput" type="search" placeholder="Søg på titel eller beskrivelse" autocomplete="off" />
+        </label>
+
+        <label class="shop-controls__field">
+          <span>Sorter efter</span>
+          <select id="sortSelect">
+            <option value="featured">Anbefalet</option>
+            <option value="price-asc">Pris lav til høj</option>
+            <option value="price-desc">Pris høj til lav</option>
+            <option value="title-asc">Titel A-Å</option>
+            <option value="title-desc">Titel Å-A</option>
+          </select>
+        </label>
+
+        <label class="shop-controls__field" data-filter-group="price">
+          <span>Prisfilter</span>
+          <select id="priceFilter">
+            <option value="all">Alle priser</option>
+            <option value="under-50">Under 50 kr.</option>
+            <option value="50-100">50-100 kr.</option>
+            <option value="over-100">Over 100 kr.</option>
+          </select>
+        </label>
+
+        <label class="shop-controls__field" data-filter-group="category">
+          <span>Kategorifilter</span>
+          <select id="categoryFilter">
+            <option value="all">Alle kategorier</option>
+          </select>
+        </label>
+
+        <label class="shop-controls__field" data-filter-group="collection">
+          <span>Kollektionfilter</span>
+          <select id="collectionFilter">
+            <option value="all">Alle kollektioner</option>
+          </select>
+        </label>
+
+        <p class="shop-controls__summary" id="resultsSummary" aria-live="polite">Indlæser produkter…</p>
+      </section>
+
+      <section class="shop-grid" id="shop" aria-label="Produktkort" aria-live="polite"></section>
+    </main>
+
     <footer></footer>
+    <script type="module" src="js/shop.js"></script>
+    <script src="js/nav.js" defer></script>
   </body>
 </html>
