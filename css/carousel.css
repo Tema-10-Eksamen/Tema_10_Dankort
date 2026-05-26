@@ -1,0 +1,31 @@
+   .carousel {
+      width: 500px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      margin: auto;
+      border-radius: 12px;
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slide 9s infinite;
+    }
+
+    .slides img {
+      width: 500px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      30% { transform: translateX(0); }
+
+      35% { transform: translateX(-500px); }
+      65% { transform: translateX(-500px); }
+
+      70% { transform: translateX(-1000px); }
+      100% { transform: translateX(-1000px); }
+    }
