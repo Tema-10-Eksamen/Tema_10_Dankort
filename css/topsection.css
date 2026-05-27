@@ -76,6 +76,7 @@ display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     margin-bottom: 2rem;
   }
+
 .page-hero img {
  
 }
@@ -95,4 +96,4 @@ display: grid;
 @media (max-width: 560px) {
 
   }
-    }
+    
