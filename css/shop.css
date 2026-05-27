@@ -47,7 +47,7 @@ h2, h3, p {
   padding-right: 20%;
 }
 
-/***Pop-up container***/
+/***Pop-up container***//*
 .login-box {
   width: 60%;
   height: 40%;
@@ -124,7 +124,7 @@ h2 {
   font-size: 20px;
   cursor: pointer;
   margin-top: 4rem;
-}
+}*/
 
 /***øverste sektion***/
 
@@ -562,12 +562,12 @@ h2 {
     grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) repeat(2, minmax(0, 1fr));
   }
 /***Pop-up container***/
-
+/*
 .login-box {
   width: 50%;
   height: 40%;
   
-}
+}*/
 }
 
 /********MEADIA QUEARIES******/
@@ -599,6 +599,7 @@ h2 {
   
   /***Pop-up container***/
 /***Pop-up container***/
+/*
   form {
   width: 80%;
   margin: 0 auto;
@@ -638,15 +639,15 @@ h2 {
   width: 60%;
   height: 40%;
   
-}
+}*/
 }
 
 
 @media (min-width: 1560px) {
-  
+  /*
 .login-box {
   width: 50%;
   height: 40%;
   
-}
+}*/
 }
