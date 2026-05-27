@@ -285,7 +285,11 @@ h2 {
     max-width:100%;
     max-height:100%;
 }
-
+/*hoover på profil ikon*/
+.popup-img:hover{
+  opacity: 50%;
+ 
+}
 /* Luk knap */
 .close{
     position:absolute;
