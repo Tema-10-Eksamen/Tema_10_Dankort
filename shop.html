@@ -3,44 +3,185 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Css/custom.css" />
-    <link rel="stylesheet" href="Css/index.css" />
-    <script src="js/burger.js" defer></script>
-    <!--CSS LINKS-->
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/custom.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2"
+        }
+      }
+    </script>
     <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/shop.css?v=2026-05-26-final" />
+    <link rel="stylesheet" href="css/carousel.css" />
+    <link rel="stylesheet" href="css/topsection.css" />
+    <!---Javascript--->
+    <script src="js/popup.js" defer></script>
     <title>Dankort-case</title>
     <link rel="icon" type="image/png" href="favicon/apple-touch-icon.svg" />
   </head>
-  <body>
+  <body data-page="shop">
     <header>
       <div class="logo">
-        <a href="index.html"> <img src="imgs/logo.webp" alt="" /></a> <p>En del af Nexi Group</p>
+        <a href="index.html"><img src="imgs/logo.webp" alt="Logo" /></a>
+        <p>En del af Nexi Group</p>
       </div>
-      <nav class="menu">
+
+      <nav class="menu" aria-label="Primær navigation">
+        <div class="rightmenu">
         <a href="index.html">Forside</a>
         <a href="about.html">Om os</a>
-        <a href="shop.html"class="shop">Merch</a>
-        <img src="imgs/profilelogo.webp" alt="">
+        <a href="shop.html" class="shop">Merch</a>
+      <!--  <button id="profileButton" class="profile-button" type="button" aria-label="Open profile login" aria-controls="profileOverlay">-->
+ <!--  </button>-->
+   </div>
       </nav>
-
-      <div class="mobile-nav">
+  
+      <div class="mobile-nav" aria-label="Mobil navigation">
         <a href="index.html">Forside</a>
         <a href="about.html">Om os</a>
-        <a href="shop.html"class="shop">Merch</a>
-        <img src="imgs/profilelogo.webp" alt="">
-        </div>
-
-      <div class="burger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <a href="shop.html" class="shop">Merch</a>
+        <button id="profileButtonMobile" class="profile-button profile-button--mobile" type="button" aria-label="Open profile login" aria-controls="profileOverlay">
+        
+        </button>
       </div>
 
-      <a href="shop.html"></a>
+      <button class="burger" type="button" aria-label="Åbn menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+       <img src="imgs/profillogo.webp" alt="" class="popup-img" id="openPopup">
     </header>
-   
+     <!--Pop-up-->
+                <div id="popup" class="popup">
+    <span class="close">&times;</span>
+    <div class="login-box">
+  <button class="close">×</button>
+
+  <form>
+    <h2>Opret profil</h2>
+
+    <div class="input-group">
+      <span><img src="imgs/profillogo.webp" alt=""></span>
+      <input type="text" placeholder="Brugernavn eller email">
+    </div>
+
+    <div class="input-group">
+      <input type="password" placeholder="Password">
+    </div>
+
+    <a href="#" class="forgot">Glemt adgangskode</a>
+
+    <button type="submit" class="login-btn">Log ind</button>
+  </form>
+</div>
+</div>
+    <main class="shop-page">
+     
+      <section class="shop-hero">
+        <h2>Vi tilbyder nøje udvalgte produkter skabt med omtanke for naturen </h2>
+        <p>
+          Produkter produceret af genbrugsmaterialer og ansvarlige materialevalg, hvor kvalitet og bæredygtighed går hånd i hånd. Ved hvert køb doneres 5% af overskuddet til Naturfonden for at støtte arbejdet med at beskytte og bevare naturen.</p>
+      </section>
+
+      <!--new-item-->
+       <div class="page-hero">
+      <img src="imgs/maskgroup.webp" alt="">
+      <div class="new-item">
+        <div>
+        <h2>
+          NYESTE PRODUKT
+        </h2>
+        <h3>Muleposen</h3>
+        <p>Vores mulepose er produceret med fibre fra tang – en overset spildressource fra havet. Ved at støtte innovative producenter, der genanvender naturlige materialer, er vi med til at skabe produkter med omtanke for både miljø og fremtid.</p>
+        <button class="new-item-button"><p>Læg i kurv</p>
+            </button>
+      </div></div>
+    </div>
+<!--<div class="carousel-track">
+        ${slides}
+      </div>
+      <button class="carousel-btn prev" type="button" aria-label="Forrige billede">‹</button>
+      <button class="carousel-btn next" type="button" aria-label="Næste billede">›</button>
+    </div>-->
+      <section class="shop-controls" aria-label="Filtrering og sortering">
+        <label class="shop-controls__field">
+          <span>Søg produkter</span>
+          <input id="searchInput" type="search" placeholder="Søg på titel eller beskrivelse" autocomplete="off" />
+        </label>
+
+        <label class="shop-controls__field">
+          <span>Sorter efter</span>
+          <select id="sortSelect">
+            <option value="featured">Anbefalet</option>
+            <option value="price-asc">Pris lav til høj</option>
+            <option value="price-desc">Pris høj til lav</option>
+            <option value="title-asc">Titel A-Å</option>
+            <option value="title-desc">Titel Å-A</option>
+          </select>
+        </label>
+
+        <label class="shop-controls__field" data-filter-group="price">
+          <span>Prisfilter</span>
+          <select id="priceFilter">
+            <option value="all">Alle priser</option>
+            <option value="under-50">Under 50 kr.</option>
+            <option value="50-100">50-100 kr.</option>
+            <option value="over-100">Over 100 kr.</option>
+          </select>
+        </label>
+
+        <label class="shop-controls__field" data-filter-group="category">
+          <span>Kategorier</span>
+          <select id="categoryFilter">
+            <option value="all">Alle kategorier</option>
+          </select>
+        </label>
+
+        <label class="shop-controls__field" data-filter-group="collection">
+          <span>Kollektioner</span>
+          <select id="collectionFilter">
+            <option value="all">Alle kollektioner</option>
+          </select>
+        </label>
+
+        <p class="shop-controls__summary" id="resultsSummary" aria-live="polite">Indlæser produkter…</p>
+      </section>
+
+      <section class="shop-grid" id="shop" aria-label="Produktkort" aria-live="polite"></section>
+    <!--
+    <article class="product-card" data-product-id="${product.id}" aria-label="Se detaljer for ${product.title}">
+      <div class="product-card__visual">
+        ${createCarouselMarkup(product)}
+        ${createBadgeMarkup(product)}
+      </div>
+
+      <div class="product-card__content">
+        <h3 class="product-card__title">${product.title}</h3>
+        ${product.collectionName ? `<p class="product-card__collection">${product.collectionName}</p>` : ''}
+        <p class="product-card__description">${product.description}</p>
+        ${createSwatchesMarkup(product)}
+
+        <div class="product-card__footer">
+          <div>
+            <p class="product-card__price">${product.price}</p>
+            <p class="product-card__stock ${product.stockClass}">${product.stockLabel}</p>
+          </div>
+
+          <div class="product-card__actions">
+            <button class="product-card__button" type="button" ${product.soldOut ? 'disabled' : ''}>
+              ${product.soldOut ? 'Udsolgt' : 'Læg i kurv'}
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </article>-->
+    </main>
+
     <footer></footer>
+    
+    <script type="module" src="js/shop.js"></script>
+    <script src="js/nav.js" defer></script>
   </body>
 </html>

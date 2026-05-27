@@ -3,44 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Css/custom.css" />
-    <link rel="stylesheet" href="Css/index.css" />
-    <script src="js/burger.js" defer></script>
-    <!--CSS LINKS-->
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/custom.css" />
+
     <link rel="stylesheet" href="css/general.css" />
+     <!---Javascript--->
+    <script src="js/popup.js" defer></script>
     <title>Dankort-case</title>
     <link rel="icon" type="image/png" href="favicon/apple-touch-icon.svg" />
   </head>
   <body>
     <header>
       <div class="logo">
-        <a href="index.html"> <img src="imgs/logo.webp" alt="" /></a> <p>En del af Nexi Group</p>
+        <a href="index.html"><img src="imgs/logo.webp" alt="Logo" /></a>
+        <p>En del af Nexi Group</p>
       </div>
-      <nav class="menu">
+
+      <nav class="menu" aria-label="Primær navigation">
+        <div class="rightmenu">
         <a href="index.html">Forside</a>
         <a href="about.html">Om os</a>
-        <a href="shop.html"class="shop">Merch</a>
-        <img src="imgs/profilelogo.webp" alt="">
+        <a href="shop.html" class="shop">Merch</a>
+      <!--  <button id="profileButton" class="profile-button" type="button" aria-label="Open profile login" aria-controls="profileOverlay">-->
+ <!--  </button>-->
+   </div>
       </nav>
-
-      <div class="mobile-nav">
+  
+      <div class="mobile-nav" aria-label="Mobil navigation">
         <a href="index.html">Forside</a>
         <a href="about.html">Om os</a>
-        <a href="shop.html"class="shop">Merch</a>
-        <img src="imgs/profilelogo.webp" alt="">
-        </div>
-
-      <div class="burger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <a href="shop.html" class="shop">Merch</a>
+        <button id="profileButtonMobile" class="profile-button profile-button--mobile" type="button" aria-label="Open profile login" aria-controls="profileOverlay">
+        
+        </button>
       </div>
 
-      <a href="shop.html"></a>
+      <button class="burger" type="button" aria-label="Åbn menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+       <img src="imgs/profillogo.webp" alt="" class="popup-img" id="openPopup">
     </header>
-   
+     <!--Pop-up-->
+                <div id="popup" class="popup">
+    <span class="close">&times;</span>
+    <div class="login-box">
+  <button class="close">×</button>
+
+  <form>
+    <h2>Opret profil</h2>
+
+    <div class="input-group">
+      <span><img src="imgs/profillogo.webp" alt=""></span>
+      <input type="text" placeholder="Brugernavn eller email">
+    </div>
+
+    <div class="input-group">
+      <input type="password" placeholder="Password">
+    </div>
+
+    <a href="#" class="forgot">Glemt adgangskode</a>
+
+    <button type="submit" class="login-btn">Log ind</button>
+  </form>
+</div>
+</div>
     <footer></footer>
+    <script src="js/nav.js" defer></script>
   </body>
 </html>

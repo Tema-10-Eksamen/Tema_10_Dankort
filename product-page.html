@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="importmap">
+      {
+        "imports": {
+          "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/shop.css" />
+    <link rel="stylesheet" href="css/product-page.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
+     <!---Javascript--->
+    <script src="js/popup.js" defer></script>
+    <title>Dankort-case</title>
+    <link rel="icon" type="image/png" href="favicon/apple-touch-icon.svg" />
+  </head>
+  <body data-page="product-page">
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="imgs/logo.webp" alt="Logo" /></a>
+        <p>En del af Nexi Group</p>
+      </div>
+
+      <nav class="menu" aria-label="Primær navigation">
+        <div class="rightmenu">
+        <a href="index.html">Forside</a>
+        <a href="about.html">Om os</a>
+        <a href="shop.html" class="shop">Merch</a>
+      <!--  <button id="profileButton" class="profile-button" type="button" aria-label="Open profile login" aria-controls="profileOverlay">-->
+ <!--  </button>-->
+   </div>
+      </nav>
+  
+      <div class="mobile-nav" aria-label="Mobil navigation">
+        <a href="index.html">Forside</a>
+        <a href="about.html">Om os</a>
+        <a href="shop.html" class="shop">Merch</a>
+        <button id="profileButtonMobile" class="profile-button profile-button--mobile" type="button" aria-label="Open profile login" aria-controls="profileOverlay">
+        
+        </button>
+      </div>
+
+      <button class="burger" type="button" aria-label="Åbn menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+       <img src="imgs/profillogo.webp" alt="" class="popup-img" id="openPopup">
+    </header>
+      <!--Pop-up-->
+                <div id="popup" class="popup">
+    <span class="close">&times;</span>
+    <div class="login-box">
+  <button class="close">×</button>
+
+  <form>
+    <h2>Opret profil</h2>
+
+    <div class="input-group">
+      <span><img src="imgs/profillogo.webp" alt=""></span>
+      <input type="text" placeholder="Brugernavn eller email">
+    </div>
+
+    <div class="input-group">
+      <input type="password" placeholder="Password">
+    </div>
+
+    <a href="#" class="forgot">Glemt adgangskode</a>
+
+    <button type="submit" class="login-btn">Log ind</button>
+  </form>
+</div>
+</div>
+    <main class="product-page-shell">
+      <div class="product-page__topbar">
+        <a href="shop.html" class="product-card__ghost product-page__back-link">← Tilbage til shop</a>
+      </div>
+
+      <div id="productPageContent" class="product-page__content" aria-live="polite"></div>
+      <!--Carousel-->
+ <!--     <div class="carousel">
+    <div class="slides">
+      <img src="billede1.jpg" alt="Billede 1">
+      <img src="billede2.jpg" alt="Billede 2">
+      <img src="billede3.jpg" alt="Billede 3">
+    </div>
+  </div>-->
+    </main>
+
+    <footer></footer>
+<!--Pop-up-->
+  <!--  <div id="profileOverlay" class="profile-overlay hidden">
+      <div class="profile-popup" role="dialog" aria-modal="true" aria-labelledby="profilePopupTitle">
+        <button id="closeProfilePopup" class="profile-popup__close" type="button" aria-label="Close login popup">×</button>
+
+        <h2 id="profilePopupTitle" class="profile-popup__title">Opret profil</h2>
+
+        <form class="profile-popup__form">
+          <label class="profile-popup__field">
+            <span class="profile-popup__icon">👤</span>
+            <input type="text" placeholder="Brugernavn eller email" autocomplete="username" />
+          </label>
+
+          <label class="profile-popup__field">
+            <input type="password" placeholder="Password" autocomplete="current-password" />
+          </label>
+
+          <a href="#" class="profile-popup__forgot">Glemt adgangskode</a>
+
+          <button type="submit" class="profile-popup__submit">Log ind</button>
+        </form>
+      </div>
+    </div>-->
+
+    <script type="module" src="js/product-page.js"></script>
+    <script src="js/nav.js" defer></script>
+  </body>
+</html>
