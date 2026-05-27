@@ -78,6 +78,8 @@ h2, h3, p {
   line-height: 1.65;
 }
 
+/*Filtrering af produkter*/
+
 .shop-controls {
   display: grid;
   grid-template-columns: 1fr;
@@ -523,7 +525,28 @@ h2, h3, p {
 }
 
 @media (min-width: 560px) {
-  
+  /*filtrering*/
+
+  .shop-controls {
+    justify-content: center;
+    stretch: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+  padding: 1rem;
+  border-radius: 24px;
+  margin-bottom: 1.25rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--shop-border);
+  box-shadow: var(--shop-shadow);
+}
+
+
+.shop-controls__field {
+  width: 100%;
+}
+
+
   /***Pop-up container***/
 /***Pop-up container***/
 /*
