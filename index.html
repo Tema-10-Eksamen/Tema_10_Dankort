@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="css/general.css" />
+     <!---Javascript--->
+    <script src="js/popup.js" defer></script>
     <title>Dankort-case</title>
     <link rel="icon" type="image/png" href="favicon/apple-touch-icon.svg" />
   </head>
@@ -16,17 +18,22 @@
       </div>
 
       <nav class="menu" aria-label="Primær navigation">
+        <div class="rightmenu">
         <a href="index.html">Forside</a>
         <a href="about.html">Om os</a>
         <a href="shop.html" class="shop">Merch</a>
-        <img src="imgs/profillogo.webp" alt="Profil" />
+      <!--  <button id="profileButton" class="profile-button" type="button" aria-label="Open profile login" aria-controls="profileOverlay">-->
+ <!--  </button>-->
+   </div>
       </nav>
-
+  
       <div class="mobile-nav" aria-label="Mobil navigation">
         <a href="index.html">Forside</a>
         <a href="about.html">Om os</a>
         <a href="shop.html" class="shop">Merch</a>
-        <img src="imgs/profillogo.webp" alt="Profil" />
+        <button id="profileButtonMobile" class="profile-button profile-button--mobile" type="button" aria-label="Open profile login" aria-controls="profileOverlay">
+        
+        </button>
       </div>
 
       <button class="burger" type="button" aria-label="Åbn menu">
@@ -34,8 +41,13 @@
         <span></span>
         <span></span>
       </button>
+       <img src="imgs/profillogo.webp" alt="" class="popup-img" id="openPopup">
     </header>
-
+     <!--Pop-up-->
+                <div id="popup" class="popup">
+    <span class="close">&times;</span>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aliquid et id fugiat ipsa debitis dignissimos, aliquam quasi voluptates atque sequi minus ex saepe ab labore reiciendis praesentium nisi fugit.</p>
+</div>
     <footer></footer>
     <script src="js/nav.js" defer></script>
   </body>
