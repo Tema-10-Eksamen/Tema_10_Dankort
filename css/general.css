@@ -100,7 +100,14 @@ header.scrolled {
   color: var(--accent-dark);
 }
 
+/*WEbshop link*/
+
+.shop img {
+  margin-right: 0.5rem;
+}
+
 .shop {
+  padding-left: 1rem;
   background: var(--accent);
   color: #ffffff;
 }
@@ -195,15 +202,15 @@ header.scrolled {
     width:100%;
     height:100%;
     background:rgba(0,0,0,0.6);
-z-index: 99;
+    z-index: 99;
     justify-content:center;
     align-items:center;
 }
 
 /***Pop-up container***/
 .login-box {
+  height: 60%;
   width: 60%;
-  height: 40%;
   background: #e9e9e9;
   border-radius: 28px;
   padding: 28px 36px 40px;
@@ -285,7 +292,11 @@ h2 {
     max-width:100%;
     max-height:100%;
 }
-
+/*hoover på profil ikon*/
+.popup-img:hover{
+  opacity: 50%;
+ 
+}
 /* Luk knap */
 .close{
     position:absolute;
@@ -303,6 +314,7 @@ h2 {
   /***Pop-up container***/
 /***Pop-up container***/
   form {
+   
   width: 80%;
   margin: 0 auto;
   margin-top: 4rem;
@@ -339,7 +351,7 @@ h2 {
 
 .login-box {
   width: 60%;
-  height: 40%;
+  height: 60%;
   
 }
 }
@@ -348,7 +360,7 @@ h2 {
 
 
   form {
-  margin-top: 15%;
+  margin-top: 4rem;
   }
 }
 

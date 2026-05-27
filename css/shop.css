@@ -13,6 +13,12 @@
   src: url(../fonts/Raleway-Light.ttf);
 }
 
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --shop-bg: #f7f6f1;
   --shop-panel: #ffffff;
@@ -47,85 +53,6 @@ h2, h3, p {
   padding-right: 20%;
 }
 
-/***Pop-up container***//*
-.login-box {
-  width: 60%;
-  height: 40%;
-  background: #e9e9e9;
-  border-radius: 28px;
-  padding: 28px 36px 40px;
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  top: 18px;
-  left: 22px;
-  border: none;
-  background: none;
-  font-size: 44px;
-  font-weight: 200;
-  color: #333;
-  cursor: pointer;
-}
-
-form {
-  margin-top: 8rem;
-}
-
-h2 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 22px;
-}
-
-.input-group {
-  height: 48px;
-  border: 2px solid #555;
-  border-radius: 18px;
-  background: #d1d1d1;
-  display: flex;
-  align-items: center;
-  padding: 0 18px;
-  margin-bottom: 28px;
-  box-shadow: 0 4px 4px rgba(0,0,0,0.35);
-  margin-top: 2rem;
-}
-
-.input-group span {
-  margin-right: 12px;
-}
-
-.input-group input {
-  width: 100%;
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 16px;
-}
-
-.forgot {
-  display: block;
-  color: #aaa;
-  text-decoration: none;
-  margin-top: -14px;
-  margin-bottom: 24px;
-  font-size: 16px;
-}
-
-.login-btn {
-  display: block;
-  margin: 0 auto;
-  background: #ef1d2d;
-  color: white;
-  border: none;
-  border-radius: 999px;
-  padding: 10px 36px;
-  font-size: 20px;
-  cursor: pointer;
-  margin-top: 4rem;
-}*/
-
 /***øverste sektion***/
 
 .shop-eyebrow {
@@ -150,6 +77,8 @@ h2 {
   color: var(--shop-muted);
   line-height: 1.65;
 }
+
+/*Filtrering af produkter*/
 
 .shop-controls {
   display: grid;
@@ -282,9 +211,11 @@ h2 {
   height: 100%;
 }
 
+/*****Carousel billede******/
 .carousel-slide img {
   width: 100%;
   height: 100%;
+  transform: scale(1.4);
   object-fit: cover;
   display: block;
 }
@@ -362,6 +293,7 @@ h2 {
   display: none;
 }
 
+/*Produkt badges*/
 .product-card__badges {
   position: absolute;
   inset: 0.85rem 0.85rem auto;
@@ -394,6 +326,9 @@ h2 {
   background: linear-gradient(135deg, #FFD998, #FFE8B6);
 }
 
+
+
+/*produkt indhold*/
 .product-card__content {
   display: flex;
   flex-direction: column;
@@ -441,6 +376,13 @@ h2 {
 .product-card__color-caption strong {
   color: var(--shop-text);
   text-transform: capitalize;
+}
+
+/*Se detaljer link*/
+
+.productDetails:hover {
+  opacity: 50%;
+
 }
 
 .product-card__swatches {
@@ -596,7 +538,28 @@ h2 {
 }
 
 @media (min-width: 560px) {
-  
+  /*filtrering*/
+
+  .shop-controls {
+    justify-content: center;
+    stretch: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+  padding: 1rem;
+  border-radius: 24px;
+  margin-bottom: 1.25rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--shop-border);
+  box-shadow: var(--shop-shadow);
+}
+
+
+.shop-controls__field {
+  width: 100%;
+}
+
+
   /***Pop-up container***/
 /***Pop-up container***/
 /*

@@ -4,20 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<<<<<<< HEAD
     <!-- CSS -->
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/general.css" />
-
-    <!-- JS -->
-    <script src="js/burger.js" defer></script>
-
-=======
-    <link rel="stylesheet" href="css/general.css" />
      <!---Javascript--->
     <script src="js/popup.js" defer></script>
->>>>>>> 6e9e39c4270e69085f512ad38d547a86350cd79a
+   <!-- <script src="js/burger.js" defer></script>-->
+
     <title>Dankort-case</title>
 
     <link rel="icon" type="image/png" href="favicon/apple-touch-icon.svg" />
@@ -30,47 +24,61 @@
     <header>
 
       <div class="logo">
-<<<<<<< HEAD
-        <a href="index.html">
-          <img src="imgs/logo.webp" alt="Dankort logo" />
-        </a>
-
+       <a href="index.html"><img src="imgs/logo.webp" alt="Logo" /></a>
         <p>En del af Nexi Group</p>
       </div>
 
-      <!-- DESKTOP NAV -->
-
-      <nav class="menu">
+      <nav class="menu" aria-label="Primær navigation">
+        <div class="rightmenu">
         <a href="index.html">Forside</a>
         <a href="about.html">Om os</a>
-
-        <a href="shop.html" class="shop">
-          Merch
-        </a>
-
-        <img src="imgs/profillogo-svgformat.svg" alt="Profil ikon">
+            <a href="shop.html" class="shop"> <img src="imgs/leaf 1 - ikon.svg" alt="">Webshop ➙</a>
+      <!--  <button id="profileButton" class="profile-button" type="button" aria-label="Open profile login" aria-controls="profileOverlay">-->
+ <!--  </button>-->
+   </div>
       </nav>
-
-      <!-- MOBILE NAV -->
-
-      <div class="mobile-nav">
+  
+      <div class="mobile-nav" aria-label="Mobil navigation">
         <a href="index.html">Forside</a>
         <a href="about.html">Om os</a>
-        <a href="shop.html" class="shop">Merch</a>
-
-        <img src="imgs/profillogo-svgformat.svg" alt="Profil ikon">
+           <a href="shop.html" class="shop"> <img src="imgs/leaf 1 - ikon.svg" alt="">Webshop ➙</a>
+        <button id="profileButtonMobile" class="profile-button profile-button--mobile" type="button" aria-label="Open profile login" aria-controls="profileOverlay">
+        
+        </button>
       </div>
 
-      <!-- BURGER -->
-
-      <div class="burger">
+      <button class="burger" type="button" aria-label="Åbn menu">
         <span></span>
         <span></span>
         <span></span>
-      </div>
-
+      </button>
+       <img src="imgs/profillogo.webp" alt="" class="popup-img" id="openPopup">
     </header>
+   
+   <!--Pop-up-->
+                <div id="popup" class="popup">
+    <span class="close">&times;</span>
+    <div class="login-box">
+  <button class="close">×</button>
 
+  <form>
+    <h2>Opret profil</h2>
+
+    <div class="input-group">
+      <span><img src="imgs/profillogo.webp" alt=""></span>
+      <input type="text" placeholder="Brugernavn eller email">
+    </div>
+
+    <div class="input-group">
+      <input type="password" placeholder="Password">
+    </div>
+
+    <a href="#" class="forgot">Glemt adgangskode</a>
+
+    <button type="submit" class="login-btn">Log ind</button>
+  </form>
+</div>
+</div>
     <!-- HERO -->
 
     <main>
@@ -321,65 +329,7 @@
       </div>
 
     </footer>
-
-=======
-        <a href="index.html"><img src="imgs/logo.webp" alt="Logo" /></a>
-        <p>En del af Nexi Group</p>
-      </div>
-
-      <nav class="menu" aria-label="Primær navigation">
-        <div class="rightmenu">
-        <a href="index.html">Forside</a>
-        <a href="about.html">Om os</a>
-        <a href="shop.html" class="shop">Merch</a>
-      <!--  <button id="profileButton" class="profile-button" type="button" aria-label="Open profile login" aria-controls="profileOverlay">-->
- <!--  </button>-->
-   </div>
-      </nav>
-  
-      <div class="mobile-nav" aria-label="Mobil navigation">
-        <a href="index.html">Forside</a>
-        <a href="about.html">Om os</a>
-        <a href="shop.html" class="shop">Merch</a>
-        <button id="profileButtonMobile" class="profile-button profile-button--mobile" type="button" aria-label="Open profile login" aria-controls="profileOverlay">
-        
-        </button>
-      </div>
-
-      <button class="burger" type="button" aria-label="Åbn menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-       <img src="imgs/profillogo.webp" alt="" class="popup-img" id="openPopup">
-    </header>
-     <!--Pop-up-->
-                <div id="popup" class="popup">
-    <span class="close">&times;</span>
-    <div class="login-box">
-  <button class="close">×</button>
-
-  <form>
-    <h2>Opret profil</h2>
-
-    <div class="input-group">
-      <span><img src="imgs/profillogo.webp" alt=""></span>
-      <input type="text" placeholder="Brugernavn eller email">
-    </div>
-
-    <div class="input-group">
-      <input type="password" placeholder="Password">
-    </div>
-
-    <a href="#" class="forgot">Glemt adgangskode</a>
-
-    <button type="submit" class="login-btn">Log ind</button>
-  </form>
-</div>
-</div>
-    <footer></footer>
-    <script src="js/nav.js" defer></script>
->>>>>>> 6e9e39c4270e69085f512ad38d547a86350cd79a
+<script src="js/nav.js" defer></script>
   </body>
 </html>
 
