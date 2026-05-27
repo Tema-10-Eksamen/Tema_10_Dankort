@@ -1,7 +1,9 @@
    /*øverste section på siden*/
 
 .page-hero {
+  align-items: center;
   width: 100%;
+
 }
 
 .page-hero img {
@@ -12,7 +14,7 @@
 /************NEW-ITEM**********/
 
 .new-item {
-  margin: 1rem 0;
+  margin: 1rem;
   display: grid;
   gap: 0.45rem;
   color: var(--shop-muted);
@@ -29,12 +31,14 @@
 }
 .new-item h2 {
 margin: 0;
+padding: 2rem 0;
   font-size: clamp(2rem, 1.6rem + 1.4vw, 2.5rem);
   line-height: 1.35;
   color: var(--shop-text);
 }
 .new-item h3 {
 margin: 0;
+padding: 0.5rem 0;
   font-size: clamp(2rem, 1.6rem + 1.4vw, 2.5rem);
   line-height: 1.05;
   color: var(--shop-muted);
@@ -43,7 +47,7 @@ margin: 0;
   margin: 0.75rem 0 1rem 0;
   max-width: 48rem;
   color: var(--shop-muted);
-  line-height: 1.65;
+  line-height: 1.8;
 }
 
 .new-item-button {
@@ -69,10 +73,20 @@ margin: 0;
   .page-hero {
 display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
     margin-bottom: 2rem;
   }
+.page-hero img {
+ 
+}
 
 
+/************NEW-ITEM**********/
+
+.new-item {
+ 
+}
+    }
 
 @media (min-width: 1100px) {
 
