@@ -12,6 +12,8 @@
     </script>
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/shop.css?v=2026-05-26-final" />
+    <link rel="stylesheet" href="css/carousel.css" />
+    <link rel="stylesheet" href="css/topsection.css" />
     <title>Dankort-case</title>
     <link rel="icon" type="image/png" href="favicon/apple-touch-icon.svg" />
   </head>
@@ -48,12 +50,28 @@
     </header>
 
     <main class="shop-page">
+     
       <section class="shop-hero">
         <p class="shop-eyebrow">Scandinavisk eco-store</p>
         <h2>Vi tilbyder nøje udvalgte produkter skabt med omtanke for naturen </h2>
         <p>
           Produkter produceret af genbrugsmaterialer og ansvarlige materialevalg, hvor kvalitet og bæredygtighed går hånd i hånd. Ved hvert køb doneres 5% af overskuddet til Naturfonden for at støtte arbejdet med at beskytte og bevare naturen.</p>
       </section>
+
+      <!--new-item-->
+       <div class="page-hero">
+      <img src="imgs/maskgroup.png" alt="">
+      <div class="new-item">
+        <div>
+        <h2>
+          NYESTE PRODUKT
+        </h2>
+        <h3>Muleposen</h3>
+        <p>Vores mulepose er produceret med fibre fra tang – en overset spildressource fra havet. Ved at støtte innovative producenter, der genanvender naturlige materialer, er vi med til at skabe produkter med omtanke for både miljø og fremtid.</p>
+        <button class="new-item-button">Læg i kurv
+            </button>
+      </div></div>
+    </div>
 <!--<div class="carousel-track">
         ${slides}
       </div>
@@ -105,9 +123,38 @@
       </section>
 
       <section class="shop-grid" id="shop" aria-label="Produktkort" aria-live="polite"></section>
+    <!--
+    <article class="product-card" data-product-id="${product.id}" aria-label="Se detaljer for ${product.title}">
+      <div class="product-card__visual">
+        ${createCarouselMarkup(product)}
+        ${createBadgeMarkup(product)}
+      </div>
+
+      <div class="product-card__content">
+        <h3 class="product-card__title">${product.title}</h3>
+        ${product.collectionName ? `<p class="product-card__collection">${product.collectionName}</p>` : ''}
+        <p class="product-card__description">${product.description}</p>
+        ${createSwatchesMarkup(product)}
+
+        <div class="product-card__footer">
+          <div>
+            <p class="product-card__price">${product.price}</p>
+            <p class="product-card__stock ${product.stockClass}">${product.stockLabel}</p>
+          </div>
+
+          <div class="product-card__actions">
+            <button class="product-card__button" type="button" ${product.soldOut ? 'disabled' : ''}>
+              ${product.soldOut ? 'Udsolgt' : 'Læg i kurv'}
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </article>-->
     </main>
 
     <footer></footer>
+    <script type="module" src="js/carousel.js"></script>
     <script type="module" src="js/shop.js"></script>
     <script src="js/nav.js" defer></script>
   </body>
