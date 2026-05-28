@@ -267,3 +267,43 @@
 .footer-logo img {
   width: 80px;
 }
+button {
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-3px);
+
+  background-color: var(--prime-lime);
+
+  box-shadow: 0 10px 20px rgba(74, 169, 77, 0.15);
+}
+
+/* ---------- ALLE KNAPPER GRØNNE ---------- */
+
+.cta-btn,
+.company-card .cta-btn,
+.webshop-preview .cta-btn,
+button {
+  background-color: var(--prime-lime);
+
+  color: #000;
+
+  border: none;
+
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+/* hover */
+
+.cta-btn:hover,
+button:hover {
+  background-color: #8BE36F;
+
+  transform: translateY(-3px);
+}
