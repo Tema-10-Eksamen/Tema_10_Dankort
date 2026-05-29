@@ -344,6 +344,11 @@ h2 {
 .footer-logo img {
   width: 70px;
 }
+.copyright {
+  line-height: 1.15;
+  max-width: 800px;
+  font-size: 0.9rem;
+}
 
 /*****MEDIA Q.....*****/
 
