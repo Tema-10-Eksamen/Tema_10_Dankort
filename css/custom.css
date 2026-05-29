@@ -13,6 +13,14 @@
   font-family: "raleway_light";
   src: url(../fonts/Raleway-Light.ttf);
 }
+
+/* TYPOGRAFI */
+
+h2,
+h3,
+p {
+  font-family: "raleway_light";
+}
 :root {
   /* colors */
   --prime-red: #E21E27;
